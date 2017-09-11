@@ -1,3 +1,7 @@
+# 3.0.0 (2017-09-11)
+### Changes
+* Providing a drinking age that can be equal to false will block access for all ages
+
 # 1.0.0 (2015-04-27)
 ### Features
 * Added the rest of the countries to the data file
