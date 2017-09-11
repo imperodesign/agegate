@@ -28,7 +28,7 @@ export default class AgeGate {
   get legalAge () {
     const legalAge = this.options.age
 
-    if (!legalAge) {
+    if (typeof legalAge !== 'undefined' && !legalAge) {
       return null
     }
 
@@ -164,7 +164,7 @@ export default class AgeGate {
     ].join('/')
     let age = ~~((new Date().getTime() - +new Date(bday)) / (31557600000))
 
-    if (legalAge && age >= legalAge) {
+    if (legalAge !== null && age >= legalAge) {
       let expiry = formData.remember ? this.options.expiry : null
       this.saveCookie(expiry)
 
