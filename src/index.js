@@ -46,7 +46,9 @@ export default class AgeGate {
       }, ages)
     } else {
       for (let cont in this.data) {
-        this.data[cont].map(country => ages[country.code] = country.age)
+        this.data[cont].map(country => {
+          ages[country.code] = country.age
+        })
       }
     }
 
